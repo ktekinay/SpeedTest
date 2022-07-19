@@ -158,14 +158,6 @@ Inherits TestGroup
 
 	#tag Method, Flags = &h21
 		Private Function StripNative(s As String) As String
-		  static badChars() as string
-		  
-		  if badChars.Count = 0 then
-		    for i as integer = 0 to 31
-		      badChars.Add Chr( i )
-		    next
-		  end if
-		  
 		  return s.TrimLeft( _
 		  &u00, _
 		  &u01, _
